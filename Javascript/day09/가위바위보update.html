@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="가위버튼">가위</button>
+    <button id="바위버튼">바위</button>
+    <button id="보버튼">보</button>
+    <script>
+        const 가위버튼 = document.getElementById("가위버튼");
+        const 바위버튼 = document.getElementById("바위버튼");
+        const 보버튼 = document.getElementById("보버튼");
+        
+        let computer;
+        //0 = 가위, 1 = 바위, 2 = 보
+        가위버튼.addEventListener('click', () => {
+            가위바위보(0)
+            // 컴퓨터의차례();
+            // if(computer === 0) {
+            //     alert('무승부');
+            // } else if(computer === 1) {
+            //     alert('패배');
+            // } else {
+            //     alert('승리');
+            // }
+        })
+        바위버튼.addEventListener('click', () => {
+            컴퓨터의차례();
+            if(computer === 0) {
+                alert('승리');
+            } else if(computer === 1) {
+                alert('무승부');
+            } else {
+                alert('패배');
+            }
+        })
+        보버튼.addEventListener('click', () => {
+            컴퓨터의차례();
+            if(computer === 0) {
+                alert('패배');
+            } else if(computer === 1) {
+                alert('승리');
+            } else {
+                alert('무승부');
+            }
+        })
+
+        
+
+        function 컴퓨터의차례() {
+            computer = Math.floor(Math.random()*3);
+            if(computer === 0) {
+                alert('컴 : 가위');
+            }else if(computer === 1) {
+                alert('컴 : 바위');
+            } else {
+                alert('컴 : 보');
+            }
+            return
+        }
+
+        //버튼을 가져와서
+
+    </script>
+</body>
+</html>

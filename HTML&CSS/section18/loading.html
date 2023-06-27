@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .load-wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .loading {
+            border: 20px solid white;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            border-top: 20px solid red;
+            animation: loading 1s infinite;
+            /* animation-direction: alternate-reverse; */
+        }
+
+        @keyframes loading {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="load-wrap">
+            <div class="circle"></div>
+        </div>
+    </div>
+</body>
+</html>

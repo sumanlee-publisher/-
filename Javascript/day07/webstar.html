@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .star {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            background-color: black;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+        .empty {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // makeStar();
+        // makeStar();
+        // makeStar();
+        // enter();
+        // makeStar();
+        // makeEmpty();
+        // makeStar();
+
+
+        // for(i = 0; i < 5; i++) {
+        //     for(j = 0; j < 5 - i; j++) {
+        //         makeStar();
+        //     }
+        //     enter();
+        // }
+        
+        // for(i = 0; i < 5; i++) {
+        //     for(j = 0; j < i+1; j++) {
+        //         makeStar();
+        //     }
+        //     enter();
+        // }
+
+        // for(i = 0; i < 5; i++) { 
+        //     for(k = 0; k < i; k++) { 
+        //         makeEmpty();
+        //     }
+        //     for(j = 0; j < 5 - i; j++) { 
+        //         makeStar();
+        //     }enter();
+        // }
+        
+        // for(k = 0; k < i; k++) { 
+        //     for(j = 0; j < 5 - i; j++) { 
+        //         makeEmpty();
+        //     }
+        //     for(i = 0; i < 5; i++) { 
+        //         makeStar();
+        //     }enter();
+        // }
+        
+        for(i = 0; i < 5; i++) {
+            for(k = 0; k < i; k++) {
+                makeEmpty();
+            }
+            for(j = 0; j < 5 - i; j++){
+                makeStar();
+            } enter();
+            
+        }
+
+        for(i = 0; i < 5; i++) {
+            for(j = 0; j < i; j++) {
+                makeStar();
+            } enter();
+            for(k = 0; k < i - 5; k++) {
+                makeEmpty();
+            }
+            }
+
+
+        
+        function makeStar() {
+            document.write(`<div class="star"></div>`);
+        }
+
+        function enter() {
+            document.write(`<br>`);
+        }
+
+        function makeEmpty() {
+            document.write(`<div class="empty"></div>`);
+        }
+    </script>
+</body>
+</html>

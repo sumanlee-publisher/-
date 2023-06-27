@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 배열 하나 만들고,
+        // 랜덤한 숫자(0~9)를 4개 넣어주세요.
+        // 배열에 값 추가하기 : 배열.push(추가할값);
+
+
+        const 정답 = [];
+
+        for (let i = 0; i < 4; i++) {
+            let 난수;
+
+            while (true) {
+                난수 = Math.floor(Math.random() * 10);
+                if (정답.indexOf(난수) === -1) {
+                    break;
+                }
+            }
+            정답.push(난수);
+        }
+
+        // console.log(정답)
+
+        const userInput = [];
+
+        // console.log(userInput);
+
+        let 스트라이크 = 0;
+        let 볼 = 0;
+        
+        game();
+        function game() {
+
+            for(let i = 0; i < 4; i++) {
+            userInput.push(Number(prompt('숫자를 입력하세요.')));
+        }
+
+            for(let i = 0; i < 4; i++) {
+                if(정답[i] === userInput[i]){
+                    스트라이크++;
+                }
+                
+                for(let j = 0; j < 4; j++) {
+                    if(i !== j && userInput[i] === 정답[j]){
+                        볼++;
+                }
+            }
+        }    
+        console.log(`스트라이크 : ${스트라이크}, 볼 : ${볼}`);
+        스트라이크 = 0;
+        볼 = 0;
+    }
+
+
+    // 배열 초기화 방법
+        // userInput.pop() 배열 맨뒤의 요소를 꺼내쓴다.(스택방식)
+        // userInput.shift() 배열 앞 순선대로 쓴다 (큐방식)
+        // userInput.splice() //splice(start: number, deleteCount?: number | undefined): any[]
+        // userInput.splice() //몇 번째부터 몇개를 지울것인가?
+        userInput.splice(0)
+        console.log(userInput);
+    </script>
+</body>
+
+</html>

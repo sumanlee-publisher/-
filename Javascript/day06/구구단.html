@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .gugu-container {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+        .dan {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write(`<div class="gugu-container">`); //전체컨테이너
+        for(let i = 1; i <= 9; i++) {
+            document.write(`<div class="dan">`); //단 컨터이너
+            document.write(`<h3>${i}단</h3>`); // 단 제목
+            for(let j = 1; j <= 9; j++) {
+                document.write(`<p>`); // p
+                    document.write(`${i} * ${j} = ${i * j}`); //실행할 반복문
+                document.write(`</p>`); // p
+            }
+            document.write(`</div>`); //단 컨터이너
+        }
+                document.write(`</div>`); // 전체컨테이너
+        
+
+/////////////////////////////////////////////////////////////////////////////                
+                document.write(`<div class="gugu-container">`); //전체컨테이너
+        for(let i = 1; i <= 9; i++) {
+            document.write(`<div class="dan">`);
+            document.write(`<h3>${i}단</h3>`);
+            for(let j = 1; j <= 9; j++) {
+                    document.write(`<p>${i} * ${j} = ${i * j}</p>`); //실행할 반복문
+                
+        }
+        document.write(`</div>`); //단 컨터이너
+    }
+            document.write(`</div>`); // 전체컨테이너
+            
+            //헷갈릴 땐 안쪽에 들어갈 내용부터 만드는것도 방법이다.
+            function dd() {
+                document.write(`<h1>d</h1>`);
+            }
+    
+            구구단()
+
+            function 구구단() {
+        
+        for(let i = 1; i <= 9; i++) {
+            document.write(`<div class="dan">`);
+            document.write(`<h3>${i}단</h3>`);
+            for(let j = 1; j <= 9; j++) {
+                    document.write(`<p>${i} * ${j} = ${i * j}</p>`); //실행할 반복문
+                
+            }
+            document.write(`</div>`); //단 컨터이너
+        }
+                document.write(`</div>`); // 전체컨테이너
+    }
+
+
+    </script>
+</body>
+</html>

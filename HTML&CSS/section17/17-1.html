@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            /* position: relative; ??????*/
+            background-color: green;
+            
+            /* 부드러운 동작을 위한 추가 코드 */
+            transition-duration: .5s, 0s;
+            transition-property: all, background-color;
+        }
+
+        .box:hover { /*클래스에 마우스를 올렸을 때 반응하는 값*/
+            width: 400px;
+            height: 400px;
+        }
+
+        .box:active {/*클래스 box에서 마우스를 클릭했을 때 반응하는 값*/
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

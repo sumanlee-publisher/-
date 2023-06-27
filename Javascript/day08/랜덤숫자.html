@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <button id="랜덤버튼">랜덤생성(50 ~ 100)</button>
+    
+<script>
+        // 컴퓨터가 랜덤으로 가위, 바위, 보를 내는 기능
+// 랜덤 숫자만들기 
+// math.random(); 임의의 수를 반환해준다.
+// 범위는 0부터 1미만 : 0 ~ 0.999999999999999999999999
+// 소수점 탈락방법 : Math.floor();
+// 0 ~ 9까지 랜덤하게 나오는 기능을 만들고 싶다, 소수점은 탈락시키고 싶다.
+//Math.floor(); : 내림
+// --> Math.floor(Math.random()*10);
+// 1 ~ 10을 만들고 싶다.
+// --> Math.floor(Math.random()*10) + 1;
+
+    const 랜덤 = document.getElementById('랜덤버튼');
+    랜덤 = addEventListener('click', 작동);
+    
+    function 작동() {
+        alert(Math.floor(Math.random()*51 + 50));
+    } //Math.random()*51 -> 51부터 +50 -> 100까지
+    // Math.floor(Math.random() * 숫자범위 + 시작값); 랜덤값 만드는 공식
+    
+    //html 클래스 or id or tag
+    // 변수선언 = document.get ~ ('클래스', 'id', 'tag');
+    // 변수 = 이벤트리스너('실행할부분', 함수이름);
+    // 함수 함수이름() { 실행할 부분;}
+    
+    
+    
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 1000px;
+            gap: 16px;
+
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #222;
+            border-radius: 4px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: bisque;
+            /* margin: 0 16px; */
+            /* text-decoration: none; */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="box">DIV</div>
+        <div class="box">DIV</div>
+        <div class="box">DIV</div>
+        <div class="box">DIV</div>
+        <div class="box">DIV</div>
+    </div> -->
+    
+    
+    <script>
+        // document.write(`<div class="container">`);
+        //     document.write(`<div class="box">DIV</div>`);
+        //     document.write(`<div class="box">DIV</div>`);
+        //     document.write(`<div class="box">DIV</div>`);
+        //     document.write(`<div class="box">DIV</div>`);
+        //     document.write(`<div class="box">DIV</div>`);
+        //     document.write(`</div>`);
+
+        document.write(`<div class="container">`); //컨테이너
+            for(i = 1; i <= 5; i++) {               // 반복되는 규칙을 찾고
+                document.write(`<div class="box">`);//  실행할 부분을 클래스를 부여해서
+                document.write(`</div>`);           //내용물을 반복시킨다.
+            }
+        document.write(`</div>`); //컨테이너
+    </script>
+</body>
+</html>

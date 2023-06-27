@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 가위, 바위, 보
+    내가 내는 것은 알고 있다.
+    
+    상대방이 무엇을 낼지 모름 -->
+    컴퓨터 : 가위
+<!-- <button id="가위" onclick="가위내기()">가위</button>
+    html에 직접 넣어 이벤트 발생시키기
+    함수가 노출되면 아무나 접근이 가능해서 임의로 수정이 가능하다 보안이 허술하다
+리액트 = onclick에 쓴다 노출이 안되기 때문에..-->
+    <button id="가위">가위</button>
+    <button id="바위">바위</button>
+    <button id="보">보</button>
+    <!-- 동작을 부여한다 = 이벤트를 부여한다. 
+    이벤트리스너 : 어떤 상황이 발생했을 때 이벤트를 실행하겠다.
+    ex) 클릭, 드래그 ..
+-->
+    <script>
+    const 가위버튼 = document.getElementById('가위');
+    
+    // 가위버튼.onclick = 가위내기; 여러개의 동작은 만들지 못하고 보안상의 이유로 사용하지 않는다.
+    //주로 사용하는 방법    
+    가위버튼.addEventListener('click', 가위내기);
+//                             클릭, 함수작동
+// 이벤트리스너를 여러개 만들어서 여러동작을 수행할 수 있다.
+
+    console.log(가위버튼)
+
+    
+    function 가위내기() {
+        alert('비겼음');
+    }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 출생년도 입력받고 성인인 경우 true, 미성년자인 경우 false
+        // 3항 연산자
+
+        // const userBirthYear = Number(prompt('출생년도를 확인하세요.'));
+        // const userAge = Number(2023)
+        // userAge - userBirthYear >= 20 ? true : false;
+        // alert((2023 - userAge +1) >= 20);
+
+        // const userBirthYear = Number(prompt('출생년도를 입력하세요.'));
+        // const todayYear = new Date().getFullYear();
+    
+        // alert("당신의 나이는 " + (todayYear - userBirthYear + 1) + "살 입니다.");
+
+        // const userBirthYear = Number((2023 - prompt("입력") +1));
+        // alert(userBirthYear);
+        
+
+        const userBirthYear = Number(prompt("몇살?"));
+        const userAge = 2023 - userBirthYear + 1;
+        
+        userAge >= 20 ? alert('판매') : alert(`${20 - userAge}년 뒤에 다시 오셈`);
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        .ani-con {
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .mouse {
+            width: 20px;
+            height: 32px;
+            border: 2px solid white;
+            border-radius: 40%;
+            animation: mouse infinite 2s;
+        }
+        .wheel {
+            width: 6px;
+            height: 6px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(35% - 3px);
+            left: calc(50% - 3px);
+            animation: wheel infinite 2s;
+        }
+
+        @keyframes mouse {
+            0% {
+                opacity: 0;
+            }
+            30% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            70% {
+                opacity: 1;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(20px);
+            }
+        }
+
+        @keyframes wheel {
+            0% {}
+            30% {
+                transform: translateY(0px);
+            }
+            70% {
+
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translate(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ani-con">
+        <div class="mouse">
+        <div class="wheel"></div>
+        </div>
+    </div>
+</body>
+</html>

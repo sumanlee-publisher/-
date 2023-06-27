@@ -1,0 +1,16 @@
+for(i = 1; i <= 5; i++) {
+            for(j = 1; j <= 5; j++) {
+                document.write(` * `);
+            }
+            document.write(`<br>`); //
+        }
+한 줄 부터 반복되게 해보자
+html 구조를 항상생각해보면 된다.
+
+                document.write(` * `); //별찍고
+            document.write(`<br>`); // br
+
+
+            google
+            clip-path maker
+            

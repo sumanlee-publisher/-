@@ -1,0 +1,12 @@
+클래스조작
+add, remove => 클래스 넣고 빼주는 기능
+contains => 개체안에 클래스가 존재하는지, 있으면 true 없으면 false
+toggle => 클래스를 넣고 빼고 해주는 기능 on, off역할
+
+변수.classList.add('클래스추가');
+변수.classList.remove('클래스제거');
+
+console.log(container.classList.contains('클래스이름'));
+container.classList.toggle('클래스이름o'); on
+container.classList.toggle('클래스이름x'); off
+

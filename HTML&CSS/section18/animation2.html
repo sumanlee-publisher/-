@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: black;
+        }
+        /* .container {
+            border: 1px solid black;
+            display: flex;
+            margin: 0 auto;
+        } */
+        .circle-1 {
+            background-color: rgb(103, 101, 101);
+            border-radius: 100%;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: circle1 2s infinite ;
+        }
+        .circle-2 {
+            background-color: rgb(101, 101, 101);
+            border-radius: 100%;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: circle2 3s infinite alternate-reverse;
+        }
+        .circle-3 {
+            background-color: rgb(126, 126, 126);
+            border-radius: 100%;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: circle2 2s infinite reverse;
+        }
+
+        @keyframes circle1 {
+            from {
+                opacity: 0;
+            }
+            50% {
+                opacity: 100;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        /* @keyframes circle2 {
+            from {
+                opacity: 0;
+            }
+            50% {
+                opacity: 100;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        @keyframes circle1 {
+            from {
+                opacity: 0;
+            }
+            50% {
+                opacity: 100;
+            }
+            to {
+                opacity: 0;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
+    </div>
+</body>
+</html>

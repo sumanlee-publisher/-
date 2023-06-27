@@ -1,0 +1,6 @@
+
+const 복수형 = document.getElementsByClassName(content);
+        복수형[0] or 복수형[4]
+
+
+
