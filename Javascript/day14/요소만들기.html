@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <div id="container">
+
+  <button id="print">출력</button>
+
+ </div>
+
+
+
+ 
+ 
+ <script>
+  //버튼을 누를 때마다 <p>안녕하세요</p>를 나오게 한다.
+  //이벤트리스너 활용
+
+  const button = document.getElementById('print');
+  const container = document.getElementById('container');
+
+  button.addEventListener('click', () => {
+   const pTag = document.createElement('p');
+   const pInner = document.createTextNode('hi');
+
+   const delSpan = document.createElement('span');
+   const delSpanInner = document.createTextNode('[삭제]');
+
+   pTag.addEventListener('click', () => {
+    pTag.remove();
+   })
+
+   pTag.appendChild(pInner);
+   pTag.appendChild(delSpanInner);
+   container.appendChild(pTag);
+  })
+
+
+ </script>
+</body>
+</html>
