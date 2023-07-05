@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+  }
+  
+  .place {
+   width: 50%;
+   height: 50vh;
+   background-color: pink;
+   margin: 100px auto;
+  }
+ </style>
+</head>
+<body>
+ <div class="place"></div>
+
+ <script>
+  const place = document.querySelector(".place");
+
+  let clickX, clickY;
+  let isClicked = false;
+
+   place.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    if(isClicked) {
+
+     clickX = e.clientX;
+     clickY = e.clientY;
+     
+     console.log(clickX, clickY);
+    }
+   })
+  
+  
+   
+   place.addEventListener('mousemove', (e) => {
+    if(isClicked) {
+
+     const 현재X = e.clientX; 
+     const 현재Y = e.clientY;
+ 
+     place.innerHTML = `x이동 ${현재X - clickX}, y이동${현재Y - clickY}`;
+    }
+   
+   })
+
+  place.addEventListener('mouseup', (e) => {
+
+  })
+  
+  // console.log(클릭 - 마우스이동);
+  //client, offset
+  
+  </script>
+</body>
+</html>
